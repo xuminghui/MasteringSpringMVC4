@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layout/default">
+<head lang="en">
+<title>Hello twitter</title>
+</head>
+<body>
+	<div class="row" layout:fragment="content">
+		<ul class="collection">
+			<li class="collection-item avatar" th:each="attribute : ${attributes}">
+				<span class="title" th:text="${attribute}">book.title</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
